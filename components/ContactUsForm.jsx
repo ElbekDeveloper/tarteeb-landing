@@ -37,7 +37,7 @@ export function ContactUsForm () {
                     <div className="flex flex-col items-center text-center space-y-2">
                         <CheckCircle2 className="w-12 h-12 text-green-500" />
                         <CardTitle>Thank you!</CardTitle>
-                        <CardDescription>We'll be in touch soon about your demo.</CardDescription>
+                        <CardDescription>We&apos;ll be in touch soon about your demo.</CardDescription>
                     </div>
                 </CardContent>
             </Card>)
