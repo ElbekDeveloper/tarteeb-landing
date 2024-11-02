@@ -11,11 +11,13 @@ import Header from './common/Header';
 import About from './About';
 import Footer from './common/Footer';
 import AnimatedPhone from './AnimatedPhone';
+import BannerNotice from './BannerNotice';
 // import { IonIcon } from 'ionicons';
 
 function Landing () {
     return (
         <div id="top">
+            <BannerNotice />
             <Header />
             <main>
                 <article>
