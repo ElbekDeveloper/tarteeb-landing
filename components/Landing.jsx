@@ -8,10 +8,11 @@ import Features from './Features';
 import Statistics from './Statistics';
 import VideoDemo from './VideoDemo';
 import Header from './common/Header';
-import About from './About';
 import Footer from './common/Footer';
 import AnimatedPhone from './AnimatedPhone';
 import BannerNotice from './BannerNotice';
+import ContactUs from './ConactUs';
+import Reviews from './Reviews';
 // import { IonIcon } from 'ionicons';
 
 function Landing () {
@@ -25,7 +26,8 @@ function Landing () {
                     <Statistics />
                     <Features />
                     <VideoDemo />
-                    <About />
+                    <Reviews />
+                    <ContactUs />
                 </article>
                 <div className="fixed bottom-10 right-10 md:hidden">
                     <AnimatedPhone />

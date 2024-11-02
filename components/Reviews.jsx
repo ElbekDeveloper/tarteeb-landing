@@ -5,10 +5,10 @@ import Shape2 from '../public/assets/images/about-shape-2.svg';
 import Shape3 from '../public/assets/images/about-shape-3.png';
 import Shape4 from '../public/assets/images/about-shape-4.svg';
 
-export default function About () {
+export default function Reviews () {
     return (
 
-        <section className="section about" id="about" aria-label="about">
+        <section className="section about !mt-32" id="about" aria-label="about">
             <div className="container">
 
                 <figure className="about-banner">

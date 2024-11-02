@@ -22,23 +22,23 @@ export default function Header () {
 
     return (
         <>
-            <header className="header relative" data-header>
+            <header className="header relative text-sm" data-header>
                 <BannerNotice isVisible={isNoticeVisible} setIsVisible={setIsNoticeVisible} />
-                <div className="container p-4">
+                <div className="container p-2">
                     <a href="#" className="logo md:w-1/4 w-auto">
-                        <h1>Tarteeb</h1>
+                        <h1 className="text-lg">Tarteeb</h1>
                     </a>
 
                     <nav className={`fixed md:static top-0 left-0 h-screen md:h-auto w-full md:w-1/2
                     bg-white md:bg-transparent ${isNavOpen ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0 transition-transform duration-300
-                    z-[60] p-6 md:p-0 shadow-lg md:shadow-none`} data-navbar>
-                        <div className="wrapper flex justify-between items-center md:hidden mb-8">
+                    z-[60] p-4 md:p-0 shadow-lg md:shadow-none`} data-navbar>
+                        <div className="wrapper flex justify-between items-center md:hidden mb-4">
                             <a href="#" className="logo">
-                                <h1>Tarteeb</h1>
+                                <h1 className="text-lg">Tarteeb</h1>
                             </a>
 
                             <button className="nav-close-btn" aria-label="close menu" data-nav-toggler onClick={handleNavToggle}>
-                                <X className="w-6 h-6" aria-hidden="true" />
+                                <X className="w-4 h-4" aria-hidden="true" />
                             </button>
                         </div>
 
@@ -54,18 +54,17 @@ export default function Header () {
                         </ul>
                     </nav>
 
-                    <div className="md:w-1/4 flex justify-end gap-6">
+                    <div className="md:w-1/4 flex justify-end gap-4">
                         <span className="hidden md:block">
                             <AnimatedPhone />
                         </span>
 
-                        <a href="https://tarteeb.uz/" className="btn has-before">
+                        <a href="https://tarteeb.uz/" className="btn has-before text-sm">
                             <span className="span">Login</span>
-                            {/* <IonIcon name="arrow-forward-outline" aria-hidden="true" /> */}
                         </a>
 
                         <button className="header-action-btn" aria-label="open menu" data-nav-toggler onClick={handleNavToggle}>
-                            <Menu className="w-6 h-6" aria-hidden="true" />
+                            <Menu className="w-4 h-4" aria-hidden="true" />
                         </button>
                     </div>
 

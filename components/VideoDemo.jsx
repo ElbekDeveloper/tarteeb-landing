@@ -5,7 +5,7 @@ import VideoShape2 from '../public/assets/images/video-shape-2.png';
 
 export default function VideoDemo () {
     return (
-        <section id="demo" className="video has-bg-image" aria-label="video"
+        <section id="demo" className="video has-bg-image !pt-32" aria-label="video"
             style={{ backgroundImage: "url('./assets/images/video-bg.png')" }}>
             <div className="container">
 

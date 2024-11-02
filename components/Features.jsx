@@ -14,8 +14,8 @@ const featuresList = [
     {
         color: '42, 94%, 55%',
         icon: Performance,
-        title: 'Performance & Financial Reporting',
-        description: 'Data-Driven Insights: Access performance reporting for students and teachers, along with financial data, to make informed decisions.'
+        title: 'Analytics & Reporting',
+        description: 'Performance reporting for students and teachers, along with financial data.'
     },
     {
         color: '351, 83%, 61%',
@@ -41,9 +41,9 @@ export default function Features () {
                     {featuresList.map((feature, index) => (
                         <li key={index} className="flip-card">
                             <div className="flip-card-inner shadow-lg bg-[#F4F2EB] rounded-lg">
-                                <div className="flip-card-front p-4 rounded-lg">
-                                    <div className="flex flex-col items-center justify-center gap-10 py-10" style={{ color: feature.color }}>
-                                        <div className="card-icon h-20 w-20">
+                                <div className="flip-card-front py-2 px-4 rounded-lg">
+                                    <div className="flex flex-col items-center justify-center gap-6 py-8" style={{ color: feature.color }}>
+                                        <div className="card-icon h-10 w-10">
                                             <Image
                                                 src={feature.icon}
                                                 width="40"
