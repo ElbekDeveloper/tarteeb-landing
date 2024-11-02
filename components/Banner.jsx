@@ -13,19 +13,21 @@ export default function Banner () {
                         <span className="span">Tarteeb</span>
                     </h1>
                     <h6 className="hero-text">
-                        At Tarteeb, we are transforming education through advanced AI support, designed specifically for students, teachers, and educational administrators. Our goal is to make education more accessible, efficient, and tailored to the needs of every student.
+                        Edu CRM - A comprehensive platform for educational centers. Featuring attendance tracking,
+                        grading system, payment management, and SMS notifications.
                     </h6>
-                    <a href="#" className="btn has-before">
-                        <span className="span">Find courses</span>
+                    <div className='h-16'></div>
+                    <a href="#demo" className="btn has-before">
+                        <span className="span">How it works?</span>
                         {/* <IonIcon name="arrow-forward-outline" aria-hidden="true" /> */}
                     </a>
                 </div>
 
                 <figure className="hero-banner">
-                    <div className="img-holder one" style={{ width: 270, height: 300 }}>
+                    <div className="img-holder one hidden md:block" style={{ width: 270, height: 300 }}>
                         <Image src={HeroBanner1} width="270" height="300" alt="hero banner" className="img-cover" />
                     </div>
-                    <div className="img-holder two" style={{ width: 240, height: 370 }}>
+                    <div className="img-holder two  hidden md:block" style={{ width: 240, height: 370 }}>
                         <Image src={HeroBanner2} width="240" height="370" alt="hero banner" className="img-cover" />
                     </div>
                     <Image src={HeroShape1} width="380" height="190" alt="" className="shape hero-shape-1" />
