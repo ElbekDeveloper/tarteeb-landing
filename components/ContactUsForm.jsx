@@ -26,6 +26,7 @@ export function ContactUsForm () {
         // Here you would typically send the data to your backend
         console.log('Form submitted:', { phoneNumber, name })
 
+
         // Simulate successful submission
         setIsSubmitted(true)
     }
