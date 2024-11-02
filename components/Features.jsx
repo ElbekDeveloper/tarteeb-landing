@@ -9,7 +9,7 @@ const featuresList = [
         color: '229, 75%, 58%',
         icon: Category3,
         title: 'Management System',
-        description: '1.Admins can manage student, attendance, and invoice information\n\n2.Teachers can leverage AI and plagiarism detector'
+        description: 'Admins can manage students\' attendance, and invoice information'
     },
     {
         color: '42, 94%, 55%',
@@ -43,7 +43,7 @@ export default function Features () {
                             <div className="flip-card-inner shadow-lg bg-[#F4F2EB] rounded-lg">
                                 <div className="flip-card-front p-4 rounded-lg">
                                     <div className="flex flex-col items-center justify-center gap-10 py-10" style={{ color: feature.color }}>
-                                        <div className="card-icon">
+                                        <div className="card-icon h-20 w-20">
                                             <Image
                                                 src={feature.icon}
                                                 width="40"
@@ -56,7 +56,7 @@ export default function Features () {
                                         <h3 className="h3">
                                             <a href="#" className="card-title">{feature.title}</a>
                                         </h3>
-                                        <p className="card-text">{feature.description}</p>
+                                        <p className="card-text whitespace-pre-line">{feature.description}</p>
                                     </div>
                                 </div>
                                 <div className="flip-card-back p-4 rounded-lg">

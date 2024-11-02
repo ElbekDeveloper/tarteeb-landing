@@ -2,7 +2,7 @@ import { Phone } from "lucide-react";
 
 export default function AnimatedPhone () {
     return (
-        <a href={`tel:${process.env.PHONE_NUMBER}`}
+        <a href={`tel:+998914490133`}
             className="relative flex h-20 w-20 group hover:cursor-pointer"
             aria-label="call us now">
             <Phone className="w-full h-full p-4 absolute z-10 
