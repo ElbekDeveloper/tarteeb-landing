@@ -3,7 +3,6 @@ import {
   BellRinging,
   ChatCircleText,
   Exam,
-  TelegramLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/motion/Reveal";
 
@@ -13,11 +12,11 @@ export default function Showcase() {
       <div className="container mx-auto max-w-6xl">
         <div className="max-w-3xl">
           <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl">
-            Telegram bot and SMS for parents
+            Meet Kabutar, the messenger for parents
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            A bot branded for your center keeps parents in the loop. Parents
-            without Telegram get the same alerts by SMS.
+            Kabutar is the Telegram bot every Tarteeb parent connects to. It
+            sends a message as soon as attendance is taken.
           </p>
         </div>
 
@@ -26,23 +25,26 @@ export default function Showcase() {
             <BellRinging weight="duotone" className="size-8" />
             <h3 className="mt-10 text-2xl font-semibold">Attendance alerts</h3>
             <p className="mt-2 max-w-[44ch] text-primary-foreground/90">
-              Mark a student absent and their parents are notified within
-              seconds, by Telegram or SMS.
+              Take attendance and parents are messaged within seconds, by
+              Telegram or SMS.
             </p>
           </Reveal>
 
           <Reveal
             delay={0.05}
-            className="rounded-2xl bg-accent p-8 text-accent-foreground md:col-span-2"
+            className="flex flex-col justify-between rounded-2xl bg-accent p-8 text-accent-foreground md:col-span-2"
           >
-            <TelegramLogo weight="duotone" className="size-8" />
-            <h3 className="mt-10 text-xl font-semibold">
-              Your center&apos;s own bot
-            </h3>
-            <p className="mt-2">
-              Branded with your name. Parents check attendance and marks any
-              time.
-            </p>
+            <Image
+              src="/images/kabutar-logo.jpg"
+              alt="Kabutar"
+              width={64}
+              height={64}
+              className="size-16 rounded-full"
+            />
+            <div className="mt-8">
+              <p className="text-4xl font-semibold tracking-tight">100,000+</p>
+              <p className="mt-1">messages sent by Kabutar</p>
+            </div>
           </Reveal>
 
           <Reveal
@@ -65,8 +67,8 @@ export default function Showcase() {
             <Exam weight="duotone" className="size-8 text-primary" />
             <h3 className="mt-8 text-xl font-semibold">Marks alerts</h3>
             <p className="mt-2 text-muted-foreground">
-              Enter a mark and parents receive it instantly. Everything is
-              stored.
+              Enter a mark and parents receive it right away, with the
+              attendance message.
             </p>
           </Reveal>
 
@@ -75,9 +77,10 @@ export default function Showcase() {
             className="rounded-2xl bg-muted p-8 md:col-span-2"
           >
             <ChatCircleText weight="duotone" className="size-8 text-primary" />
-            <h3 className="mt-8 text-xl font-semibold">SMS for everyone else</h3>
+            <h3 className="mt-8 text-xl font-semibold">Connect by SMS</h3>
             <p className="mt-2 text-muted-foreground">
-              Parents without Telegram get the same alerts by SMS.
+              Register a student and their parents get an SMS to connect to
+              Kabutar.
             </p>
           </Reveal>
         </div>

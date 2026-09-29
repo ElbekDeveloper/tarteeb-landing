@@ -1,19 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "motion/react";
-import { ChatCircleText, PaperPlaneTilt } from "@phosphor-icons/react/dist/ssr";
+import { ChatCircleText } from "@phosphor-icons/react/dist/ssr";
 
-// Sample alert copy shown to parents. Swap this component for a real Telegram
-// bot screenshot once one is available.
+// Real Kabutar message format, with a sample student name.
 const messages = [
   {
     id: "absence",
-    text: "Aziza Karimova was marked absent from IELTS 6.5 today.",
+    text: "28-09-2026: Elbek N. darsga kelmadi.",
     time: "18:12",
   },
   {
     id: "mark",
-    text: "Aziza Karimova received 82/100 for the Speaking test in IELTS 6.5.",
+    text: "29-09-2026: Elbek N. darsga keldi. Baho 5. harakati kuchli.",
     time: "19:45",
   },
 ];
@@ -46,12 +46,16 @@ export default function AlertPreview() {
         variants={{ show: { transition: { staggerChildren: 0.9, delayChildren: 0.5 } } }}
       >
         <div className="flex items-center gap-3 border-b border-border px-5 py-4">
-          <span className="flex size-9 items-center justify-center rounded-full bg-primary text-primary-foreground">
-            <PaperPlaneTilt weight="fill" className="size-4" />
-          </span>
+          <Image
+            src="/images/kabutar-logo.jpg"
+            alt=""
+            width={36}
+            height={36}
+            className="size-9 rounded-full"
+          />
           <div className="leading-tight">
-            <p className="text-sm font-semibold">Your Center</p>
-            <p className="text-xs text-muted-foreground">bot</p>
+            <p className="text-sm font-semibold">Kabutar</p>
+            <p className="text-xs text-muted-foreground">Tarteeb parent bot</p>
           </div>
         </div>
 
@@ -83,7 +87,7 @@ export default function AlertPreview() {
           <ChatCircleText weight="fill" className="size-4" />
           SMS
         </p>
-        Jasur Toshmatov was absent from Math 8-A today.
+        28-09-2026: Elbek N. darsga kelmadi.
       </motion.div>
     </div>
   );

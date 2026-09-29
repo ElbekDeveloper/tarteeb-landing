@@ -31,8 +31,8 @@ const features = [
   },
   {
     icon: TelegramLogo,
-    title: "Parent Telegram bot, branded for your center",
-    body: "Parents open the bot to see attendance history and marks whenever they want, under your center's name.",
+    title: "Kabutar keeps parents in the loop",
+    body: "Register a student and their parents get an SMS to connect to Kabutar. From then on it messages them whenever you take attendance.",
   },
 ];
 

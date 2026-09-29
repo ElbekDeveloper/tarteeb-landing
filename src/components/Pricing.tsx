@@ -10,7 +10,7 @@ const plans = [
     period: "forever",
     description: "For individual teachers with up to 20 students",
     features: [
-      "Your branded Telegram bot",
+      "Kabutar Telegram bot for parents",
       "Attendance & marks alerts to parents",
       "SMS and Telegram notifications",
       "Up to 20 students",
@@ -28,7 +28,7 @@ const plans = [
     period: "month",
     description: "For growing study centers with up to 100 students",
     features: [
-      "Your branded Telegram bot",
+      "Kabutar Telegram bot for parents",
       "Attendance & marks alerts to parents",
       "SMS and Telegram notifications",
       "Up to 100 students",
@@ -47,7 +47,7 @@ const plans = [
     period: "month",
     description: "Everything you need to run a large study center",
     features: [
-      "Your branded Telegram bot",
+      "Kabutar Telegram bot for parents",
       "Attendance & marks alerts to parents",
       "SMS and Telegram notifications",
       "Unlimited students",

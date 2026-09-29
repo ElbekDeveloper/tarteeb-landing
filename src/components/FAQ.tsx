@@ -3,12 +3,16 @@ import { Plus } from "@phosphor-icons/react/dist/ssr";
 // Answers only restate facts already stated in the pricing and product copy.
 const questions = [
   {
-    q: "Does every parent need Telegram?",
-    a: "No. Parents with Telegram use your center's branded bot. Parents without it get the same alerts by SMS.",
+    q: "What is Kabutar?",
+    a: "Kabutar is the Tarteeb Telegram bot for parents. It sends a message whenever attendance is taken. One bot serves every center.",
   },
   {
-    q: "What can parents see in the bot?",
-    a: "Attendance history and marks, whenever they want, under your center's name.",
+    q: "How do parents connect to Kabutar?",
+    a: "When you register a student, their parents automatically receive an SMS to connect to Kabutar.",
+  },
+  {
+    q: "Does every parent need Telegram?",
+    a: "No. Alerts also go out by SMS, so parents without Telegram stay informed.",
   },
   {
     q: "What if I have more than 20 students?",

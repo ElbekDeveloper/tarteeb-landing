@@ -17,8 +17,7 @@ export default function Hero() {
               Parents know the moment you mark attendance.
             </h1>
             <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-muted-foreground">
-              Enter attendance or a mark once. Parents get an SMS or Telegram
-              alert in seconds. Free for solo teachers.
+              Kabutar messages parents the moment you take attendance or enter a mark. Free for solo teachers.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="text-base">
