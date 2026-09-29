@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="px-4 pb-16 pt-10 lg:pb-24 lg:pt-16">
+      <section className="overflow-x-clip px-4 pb-16 pt-10 lg:pb-24 lg:pt-16">
         <div className="container mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
             <h1 className="text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-[3.5rem]">
