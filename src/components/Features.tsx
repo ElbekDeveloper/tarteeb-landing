@@ -96,14 +96,11 @@ export default function Features() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">
-                    AI + Teacher: Perfect Essay Evaluation
+                    Marks Sent to Parents Instantly
                   </h4>
                   <p className="text-gray-600">
-                    AI Detection stops students from submitting copied work,
-                    protecting both results and your reputation.
-                    <br />
-                    Final Word from the Teacher ensures every AI assessment is
-                    checked and corrected when needed.
+                    Enter a mark once. Parents receive it right away by SMS or
+                    Telegram, so results never sit unseen in a notebook.
                   </p>
                 </div>
               </div>
@@ -113,12 +110,11 @@ export default function Features() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">
-                    Speaking, Backed by Teacher Oversight
+                    Parent Telegram Bot, Branded for Your Center
                   </h4>
                   <p className="text-gray-600">
-                    AI analyzes every word for detailed scoring, while teachers
-                    can listen, grade, and track progress. Activate questions
-                    instantly and monitor improvement
+                    Parents open the bot to see attendance history and marks
+                    whenever they want, with your center&apos;s name on it.
                   </p>
                 </div>
               </div>

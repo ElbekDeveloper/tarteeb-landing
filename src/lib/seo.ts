@@ -5,14 +5,15 @@ export const defaultSEO: Metadata = {
     default: "Tarteeb",
     template: "Tarteeb",
   },
-  description: "AI-Powered Classroom Tools for Speaking, Writing & Assessment",
+  description:
+    "Attendance and marks for study centers with instant SMS and Telegram alerts for parents",
   keywords: [
-    "AI",
+    "Attendance",
+    "Marks",
+    "SMS",
+    "Telegram bot",
+    "Parents",
     "Classroom",
-    "IELTS",
-    "Speaking",
-    "Writing",
-    "Assessment",
     "Teacher",
     "Student",
     "Education center",
@@ -26,7 +27,7 @@ export const defaultSEO: Metadata = {
     siteName: "Tarteeb.uz",
     title: "Tarteeb",
     description:
-      "AI-Powered Classroom Tools for Speaking, Writing & Assessment",
+      "Attendance and marks for study centers with instant SMS and Telegram alerts for parents",
     images: [
       {
         url: "/logo-gradient.jpg",
@@ -40,7 +41,7 @@ export const defaultSEO: Metadata = {
     card: "summary_large_image",
     title: "Tarteeb.uz",
     description:
-      "AI-Powered Classroom Tools for Speaking, Writing & Assessment",
+      "Attendance and marks for study centers with instant SMS and Telegram alerts for parents",
     images: ["/logo-gradient.jpg"],
     creator: "tarteeb team",
   },
