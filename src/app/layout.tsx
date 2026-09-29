@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import "aos/dist/aos.css";
 import AOSInitializer from "@/components/AOSInitializer";
@@ -31,6 +32,11 @@ export default function RootLayout({
       >
         <AOSInitializer />
         {children}
+        {/* 100% privacy-first analytics */}
+        <Script
+          src="https://scripts.simpleanalyticscdn.com/latest.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
