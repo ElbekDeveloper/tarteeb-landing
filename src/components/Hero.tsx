@@ -1,80 +1,57 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-
-import { Dialog, DialogContent } from "./ui/dialog";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "./ui/dialog";
+import AlertPreview from "./AlertPreview";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
+
   return (
     <>
-      <section className="relative bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20 px-4">
-        <div className="container mx-auto max-w-6xl text-center">
-          {/* Main Headline */}
-          <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            {/* Welcome to */}
-            <Image
-              src={"/images/tarteeb.svg"}
-              alt="logo"
-              width={400}
-              height={400}
-              className="inline-block align-middle"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            />
-            <br />
-            <p data-aos="fade-up" data-aos-delay="500">
-              Parents know attendance and marks <br /> the moment you enter them
+      <section className="px-4 pb-16 pt-10 lg:pb-24 lg:pt-16">
+        <div className="container mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+          <div>
+            <h1 className="text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-[3.5rem]">
+              Parents know the moment you mark attendance.
+            </h1>
+            <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-muted-foreground">
+              Enter attendance or a mark once. Parents get an SMS or Telegram
+              alert in seconds. Free for solo teachers.
             </p>
-          </h1>
-          {/* Subheading */}
-          <p
-            className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
-            data-aos="fade-up"
-            data-aos-delay="550"
-          >
-            Instant SMS and Telegram bot alerts for your study center. Free for
-            solo teachers.
-          </p>
-          {/* CTA Buttons */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg"
-            >
-              <a href="https://t.me/m/86rEuvWvNDIy" target="_blank" rel="noreferrer">
-                Start Free
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-gray-300 text-gray-700 px-8 py-3 text-lg hover:bg-gray-50"
-              onClick={() => setOpen(true)}
-            >
-              Watch Demo
-            </Button>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Button asChild size="lg" className="text-base">
+                <a
+                  href="https://t.me/m/86rEuvWvNDIy"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Start Free
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-base"
+                onClick={() => setOpen(true)}
+              >
+                Watch Demo
+              </Button>
+            </div>
           </div>
-          {/*  */}
+
+          <AlertPreview />
         </div>
-        {/* Background Elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
       </section>
+
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="min-w-1/2 p-4 bg-white rounded-xl">
-          <div className="relative w-full mt-8 h-[50vh] rounded overflow-hidden">
+        <DialogContent className="min-w-1/2 rounded-2xl bg-card p-4">
+          <div className="relative mt-8 h-[50vh] w-full overflow-hidden rounded-xl">
             <iframe
               src="https://www.youtube.com/embed/dx9Cmx-arJM?autoplay=1&embeds_referring_euri=https%3A%2F%2Fwww.tarteeb.uz%2F&source_ve_path=MjM4NTE"
               title="Tarteeb Demo Video"
-              className="absolute top-0 left-0 w-full h-full"
+              className="absolute left-0 top-0 h-full w-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media;"
               allowFullScreen
             ></iframe>

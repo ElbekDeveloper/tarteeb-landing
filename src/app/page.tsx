@@ -1,32 +1,31 @@
-import PromoBanner from "@/components/PromoBanner";
-import Navigation from "@/components/Navigation";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import WhoTrustUs from "@/components/WhoTrustUs";
 import DashboardPreview from "@/components/DashboardPreview";
+import Showcase from "@/components/Showcase";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
+import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import Showcase from "@/components/Showcase";
-import WhoTrustUs from "@/components/WhoTrustUs";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <PromoBanner />
-      <Navigation />
-      <div className="pt-[104px]">
+      <Header />
+      <main className="pt-[104px]">
         <Hero />
+        <WhoTrustUs />
         <DashboardPreview />
         <Showcase />
         <Features />
         <Testimonials />
-        <WhoTrustUs />
-
         <Pricing />
+        <FAQ />
         <CTA />
-        <Footer />
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 }

@@ -1,125 +1,79 @@
 import Image from "next/image";
+import {
+  CalendarCheck,
+  Exam,
+  PaperPlaneTilt,
+  TelegramLogo,
+  UsersThree,
+} from "@phosphor-icons/react/dist/ssr";
+import { Reveal } from "@/components/motion/Reveal";
+
+const features = [
+  {
+    icon: PaperPlaneTilt,
+    title: "Attendance and parent SMS in seconds",
+    body: "Take attendance and grade in one click. Parents get an instant SMS, with no calls or Excel reports after class.",
+  },
+  {
+    icon: UsersThree,
+    title: "Students and groups, stress-free",
+    body: "Register students, assign them to groups and handle changes in a click.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Monthly and yearly attendance at a glance",
+    body: "Color-coded monthly tables for every group. The yearly heatmap turns red as absences grow, so directors spot problems early.",
+  },
+  {
+    icon: Exam,
+    title: "Marks sent to parents instantly",
+    body: "Enter a mark once. Parents receive it by SMS or Telegram, so results never sit unseen in a notebook.",
+  },
+  {
+    icon: TelegramLogo,
+    title: "Parent Telegram bot, branded for your center",
+    body: "Parents open the bot to see attendance history and marks whenever they want, under your center's name.",
+  },
+];
 
 export default function Features() {
   return (
-    <section id="admin" className="py-0 md:py-20 px-4 bg-gray-50">
-      <div className="container mx-auto max-w-6xl">
-        {/* Admin Panel Feature */}
-        <div className="flex flex-col-reverse lg:flex-row items-start gap-12 lg:gap-16">
-          {/* Right Side - Images */}
-          <div className="w-full md:w-[60%] space-y-6 flex relative items-start justify-center">
-            <div
-              className="relative md:absolute top-0 md:left-10 z-0 scale-x-[-1]"
-              data-aos="fade-right"
-              data-aos-delay="400"
-            >
-              <Image
-                src="/images/admin-1.webp"
-                alt="Admin Panel Dashboard"
-                width={800}
-                height={600}
-                // layout="responsive"
-              />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
-            </div>
+    <section id="admin" className="px-4 py-16 lg:py-28">
+      <div className="container mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-2 lg:gap-20">
+        <Reveal className="lg:sticky lg:top-32">
+          <div className="overflow-hidden rounded-2xl border border-border bg-white p-6">
+            <Image
+              src="/images/admin-1.webp"
+              alt="Tarteeb admin panel with attendance, groups and marks"
+              width={800}
+              height={778}
+              className="mx-auto w-full max-w-lg scale-x-[-1]"
+            />
           </div>
-          {/* Left Side - Text Content */}
-          <div
-            className="lg:w-1/2 space-y-8"
-            data-aos="fade-right"
-            data-aos-delay="200"
-          >
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Complete Study Center Management
-              </h3>
-              {/* <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Our admin panel gives you unprecedented control and visibility
-                over every aspect of your study center operations. From student
-                management to performance analytics, everything you need is just
-                a click away.
-              </p> */}
-            </div>
+        </Reveal>
 
-            {/* Feature List */}
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    Attendance & Parent SMS in Seconds
-                  </h4>
-                  <p className="text-gray-600">
-                    Taking attendance and grading is now effortless. With one
-                    click, parents get an instant SMS — no more calls or Excel
-                    reports after class.
-                  </p>
-                </div>
-              </div>
+        <div>
+          <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl">
+            Complete study center management
+          </h2>
 
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    Student & Group Management — Stress-Free
-                  </h4>
-                  <p className="text-gray-600">
-                    Register students, assign them to groups, and manage changes
-                    with a single click. Quick, simple, and stress-free.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    Monthly & Yearly Attendance at a Glance
-                  </h4>
-                  <p className="text-gray-600">
-                    See each group’s monthly attendance in clear color-coded
-                    tables. The yearly heatmap turns red as absences grow —
-                    giving directors instant insight.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    Marks Sent to Parents Instantly
-                  </h4>
-                  <p className="text-gray-600">
-                    Enter a mark once. Parents receive it right away by SMS or
-                    Telegram, so results never sit unseen in a notebook.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    Parent Telegram Bot, Branded for Your Center
-                  </h4>
-                  <p className="text-gray-600">
-                    Parents open the bot to see attendance history and marks
-                    whenever they want, with your center&apos;s name on it.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ul className="mt-10 divide-y divide-border">
+            {features.map((feature, index) => (
+              <li key={feature.title}>
+                <Reveal delay={index * 0.05} className="flex gap-5 py-6">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground">
+                    <feature.icon weight="duotone" className="size-6" />
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-semibold">{feature.title}</h3>
+                    <p className="mt-1.5 text-muted-foreground">
+                      {feature.body}
+                    </p>
+                  </div>
+                </Reveal>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

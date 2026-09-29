@@ -1,37 +1,34 @@
 import Image from "next/image";
 
+const logos = [
+  { src: "/images/nippon.svg", alt: "Nippon Foundation", width: 150 },
+  { src: "/images/aloqa.webp", alt: "Aloqa", width: 170 },
+  { src: "/images/Garage.svg", alt: "Garage", width: 130 },
+];
+
 export default function WhoTrustUs() {
-  const logos = [
-    { src: "/images/nippon.svg", alt: "Nippon" },
-    { src: "/images/aloqa.webp", alt: "Aloqa" },
-    { src: "/images/Garage.svg", alt: "Garage" },
-  ];
-
   return (
-    <section className="py-8 md:py-16 px-4 bg-white">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-          Development Supported By
+    <section className="px-4 pb-16 lg:pb-24">
+      <div className="container mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <h2 className="text-sm font-medium text-muted-foreground">
+          Development supported by
         </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {logos.map((logo, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex items-center justify-center h-32"
+        <ul className="flex flex-wrap items-center gap-4">
+          {logos.map((logo) => (
+            <li
+              key={logo.alt}
+              className="flex h-20 items-center justify-center rounded-2xl border border-border bg-white px-6"
             >
-              <div className="relative w-full h-full flex items-center justify-center">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.alt == "Aloqa" ? "300" : 180}
-                  height={180}
-                  className={`${"object-contain"}`}
-                />
-              </div>
-            </div>
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.width}
+                height={56}
+                className="h-11 w-auto object-contain"
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
