@@ -17,8 +17,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Transform your workflow with intelligent task management that
-              adapts to your team&apos;s needs.
+              Attendance and marks for study centers, with instant SMS and
+              Telegram alerts for parents.
             </p>
             {/* <div className="flex gap-4">
               <Button

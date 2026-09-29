@@ -14,12 +14,11 @@ export default function Showcase() {
           >
             <div>
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Your Own AI Bot
+                Telegram Bot & SMS for Parents
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                An AI bot branded for your center accepts speaking and writing
-                tasks. For advanced learners, Lexi and Alex in “Human Mode”
-                develop natural speaking skills.
+                A Telegram bot branded for your center keeps parents in the
+                loop. Parents without Telegram get the same alerts by SMS.
               </p>
             </div>
 
@@ -31,17 +30,12 @@ export default function Showcase() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">
-                    Speaking Made More Engaging
+                    Attendance Alerts
                   </h4>
                   <p className="text-gray-600">
-                    Telegram Chat — For unstable internet or beginner students,
-                    AI conducts audio Q&A with instant detailed feedback.
-                  </p>
-                  <br />
-                  <p className="text-gray-600">
-                    Human Mode — Advanced students practice face-to-face with
-                    Lexi or Alex for natural English conversation skills. Note:
-                    AI only asks teacher-enabled questions.
+                    Mark a student absent and their parents are notified within
+                    seconds, by Telegram or SMS. No calls, no Excel reports
+                    after class.
                   </p>
                 </div>
               </div>
@@ -52,13 +46,12 @@ export default function Showcase() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">
-                    AI Essay Feedback
+                    Marks Alerts
                   </h4>
                   <p className="text-gray-600">
-                    Essays are instantly analyzed with feedback based on
-                    Cambridge and Oxford standards. All essays and results are
-                    stored, allowing monthly and yearly progress tracking
-                    anytime.
+                    Enter a mark and parents receive it instantly. Everything is
+                    stored, so parents can check attendance and marks in the
+                    bot any time.
                   </p>
                 </div>
               </div>
@@ -73,8 +66,8 @@ export default function Showcase() {
               data-aos-delay="200"
             >
               <Image
-                src="/images/lexi.webp"
-                alt="Admin Panel Dashboard"
+                src="/images/admin-2.webp"
+                alt="Tarteeb attendance table"
                 width={600}
                 height={300}
               />

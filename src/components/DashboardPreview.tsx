@@ -34,12 +34,12 @@ export default function DashboardPreview() {
               </CardHeader>
               <CardContent className="space-y-2 md:space-y-4">
                 {[
-                  "Students were not very motivated",
+                  "Parents found out about absences days later, or never",
                   "No clear way to track attendance",
-                  "Mock tests for reading and listening were costly and external.",
-                  "No proper system to track writing progress",
-                  "Little to no control over homework completion",
-                  "Homework status never reached the director",
+                  "Marks lived in notebooks and Excel files",
+                  "Teachers spent evenings calling parents",
+                  "Directors had no view of attendance across groups",
+                  "Parents had no way to check their child's progress",
                   "No academic performance insights",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -65,12 +65,12 @@ export default function DashboardPreview() {
               </CardHeader>
               <CardContent className="space-y-2 md:space-y-4">
                 {[
-                  "Students are more motivated to study on their own",
+                  "Parents get an SMS or Telegram message the moment a student is marked absent",
                   "Attendance is tracked with clear statistics, and parents are notified",
-                  "Mock tests are built into the system",
-                  "Writing progress is tracked by both AI (objective) and teachers (subjective)",
-                  "AI reminds students to complete their homework",
-                  "Directors can see homework completion at a glance through graphs",
+                  "Marks are recorded in one click and sent to parents instantly",
+                  "No more calls: every alert goes out automatically",
+                  "Directors see attendance across all groups at a glance through graphs",
+                  "Parents check attendance and marks any time in the Telegram bot",
                   "Academic performance is available instantly with one click",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">

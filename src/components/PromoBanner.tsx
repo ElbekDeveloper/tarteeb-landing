@@ -43,7 +43,7 @@ export default function PromoBanner() {
                 </span>
                 <span className="text-[#111] hidden md:block">
                   a cozy campfire where innovative educators gather to share
-                  their experiences with AI.
+                  how they run their centers.
                 </span>
               </div>
               <Button

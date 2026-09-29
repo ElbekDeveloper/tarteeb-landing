@@ -1,53 +1,71 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useState } from "react";
-import NumberFlow from "@number-flow/react";
+
+const plans = [
+  {
+    name: "Solo Teacher",
+    price: "Free",
+    currency: "",
+    period: "forever",
+    description:
+      "The perfect plan for individual teachers with up to 20 students",
+    features: [
+      "Your branded Telegram bot",
+      "Attendance & marks alerts to parents",
+      "SMS and Telegram notifications",
+      "Up to 20 students",
+    ],
+    cta: "Start Free",
+    highlighted: true,
+    badge: "Start Free",
+    comments: "* Made possible by the Nippon Foundation’s support!",
+    link: "https://t.me/m/86rEuvWvNDIy",
+  },
+  {
+    name: "Pro",
+    price: "299 000",
+    currency: "UZS",
+    period: "month",
+    description: "For growing study centers with up to 100 students",
+    features: [
+      "Your branded Telegram bot",
+      "Attendance & marks alerts to parents",
+      "SMS and Telegram notifications",
+      "Up to 100 students",
+      "Groups & attendance analytics",
+    ],
+    cta: "Register",
+    highlighted: false,
+    badge: "",
+    comments: "",
+    link: "https://t.me/m/WPclTnvIZDdi",
+  },
+  {
+    name: "Pro Max",
+    price: "1 850 000",
+    currency: "UZS",
+    period: "month",
+    description: "Everything you need to run a large study center",
+    features: [
+      "Your branded Telegram bot",
+      "Attendance & marks alerts to parents",
+      "SMS and Telegram notifications",
+      "Unlimited students",
+      "Priority support",
+      "Onboarding & Customer Success",
+      "Money-back guarantee - Risk-free",
+    ],
+    cta: "Register",
+    highlighted: false,
+    badge: "",
+    comments: "",
+    link: "https://t.me/m/WPclTnvIZDdi",
+  },
+];
 
 export default function Pricing() {
-  const [frequency, setFrequency] = useState<string>("yearly");
-  const plans = [
-    {
-      name: "Solo Teacher",
-      price: "Free",
-      period: "forever",
-      description:
-        "The perfect plan for individual teachers with up to 20 students",
-      features: [
-        "Your branded bot",
-        "1000 minutes of AI speaking",
-        "100 essay submissions",
-        "Basic SMS support",
-      ],
-      cta: "Get Started Free",
-      popular: false,
-      comments: "* Made possible by the Nippon Foundation’s support!",
-      link: "https://t.me/m/86rEuvWvNDIy",
-    },
-    {
-      name: "Enterprise",
-      price: frequency == "monthly" ? 120 : 100,
-      period: "monthly",
-      description: "Everything you need to build successful study center",
-      features: [
-        "Your branded bot",
-        "Unlimited AI speaking",
-        "Unlimited essay submissions",
-        "Full SMS support",
-        "Onboarding & Customer Success",
-        "Money-back guarantee - Risk-free",
-      ],
-      cta: "Start Free Trial",
-      popular: true,
-      comments: "",
-      link: "https://t.me/m/WPclTnvIZDdi",
-    },
-  ];
-
   return (
     <section id="pricing" className="py-10 md:py-20 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
@@ -61,27 +79,26 @@ export default function Pricing() {
             Simple, Transparent Pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose the perfect plan for your team. Start free and scale as you
-            grow.
+            Start free and scale as your center grows.
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-          {plans.map((plan, index) => (
+        <div className="flex flex-col md:flex-row items-stretch justify-center gap-8">
+          {plans.map((plan) => (
             <Card
               data-aos="zoom-out"
               data-aos-delay="200"
-              key={index}
-              className={`relative group hover:shadow-xl transition-all duration-300 w-[90%] md:w-[35%] ${
-                plan.popular
+              key={plan.name}
+              className={`relative group hover:shadow-xl transition-all duration-300 w-[90%] md:w-[30%] ${
+                plan.highlighted
                   ? "border-1 border-purple-500 shadow-lg scale-105"
                   : "border-gray-200 hover:border-purple-200"
               }`}
             >
-              {plan.popular && (
+              {plan.badge && (
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-4 py-1">
-                  Most Popular
+                  {plan.badge}
                 </Badge>
               )}
 
@@ -89,47 +106,15 @@ export default function Pricing() {
                 <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
                   {plan.name}
                 </CardTitle>
-                <div className="flex justify-center w-full py-2">
-                  {plan.popular && (
-                    <Tabs
-                      className=""
-                      defaultValue={frequency}
-                      onValueChange={setFrequency}
-                    >
-                      <TabsList>
-                        <TabsTrigger
-                          className="p-1 text-[12px]"
-                          value="monthly"
-                        >
-                          Monthly
-                        </TabsTrigger>
-                        <TabsTrigger value="yearly" className="p-1 text-[12px]">
-                          Yearly
-                          <Badge variant="secondary">16.7% off</Badge>
-                        </TabsTrigger>
-                      </TabsList>
-                    </Tabs>
-                  )}
-                </div>
                 <div>
-                  {typeof plan.price == "number" ? (
-                    <NumberFlow
-                      value={plan.price}
-                      format={{
-                        style: "currency",
-                        currency: "USD",
-                        maximumFractionDigits: 0,
-                      }}
-                      className="text-4xl md:text-5xl font-bold text-gray-900 min-w-[120px]"
-                    />
-                  ) : (
-                    <span className="text-4xl md:text-5xl font-bold text-gray-900">
-                      {plan.price}
-                    </span>
+                  <span className="text-4xl md:text-5xl font-bold text-gray-900">
+                    {plan.price}
+                  </span>
+                  {plan.currency && (
+                    <span className="text-gray-600 ml-2">{plan.currency}</span>
                   )}
-
                   {plan.period && (
-                    <span className="text-gray-600 ml-2">/{plan.period}</span>
+                    <span className="text-gray-600 ml-1">/{plan.period}</span>
                   )}
                 </div>
 
@@ -139,8 +124,8 @@ export default function Pricing() {
               <CardContent className="pt-0 h-full flex flex-col justify-between">
                 {/* Features List */}
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-3">
                       <span className="text-green-500 text-lg">✓</span>
                       <span className="text-gray-700">{feature}</span>
                     </li>
@@ -154,10 +139,10 @@ export default function Pricing() {
                       {plan.comments}
                     </p>
                   )}
-                  <Link href={plan.link} target="__blank">
+                  <Link href={plan.link} target="_blank" rel="noreferrer">
                     <Button
                       className={`w-full cursor-pointer ${
-                        plan.popular
+                        plan.highlighted
                           ? "bg-gradient-to-r from-[#97F6F6] to-[#1DFCC8] hover:bg-purple-700 text-[#111] "
                           : "bg-white border-1 border-purple-600 text-purple-600 hover:bg-purple-50"
                       }`}

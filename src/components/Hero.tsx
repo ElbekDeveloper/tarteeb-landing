@@ -26,14 +26,18 @@ export default function Hero() {
             />
             <br />
             <p data-aos="fade-up" data-aos-delay="500">
-              AI Teaching Assistant <br /> for your study center
+              Parents know attendance and marks <br /> the moment you enter them
             </p>
           </h1>
           {/* Subheading */}
-          {/* <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Streamline your workflow with our powerful task management platform.
-            Organize, prioritize, and accomplish more with intelligent automation.
-          </p> */}
+          <p
+            className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
+            data-aos="fade-up"
+            data-aos-delay="550"
+          >
+            Instant SMS and Telegram bot alerts for your study center. Free for
+            solo teachers.
+          </p>
           {/* CTA Buttons */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
@@ -41,10 +45,13 @@ export default function Hero() {
             data-aos-delay="600"
           >
             <Button
+              asChild
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg"
             >
-              See Pricing
+              <a href="https://t.me/m/86rEuvWvNDIy" target="_blank" rel="noreferrer">
+                Start Free
+              </a>
             </Button>
             <Button
               variant="outline"
