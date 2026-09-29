@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (@media (prefers-color-scheme: dark));
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -44,7 +44,7 @@
 }
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --radius: 1rem;
   /* Tarteeb brand: Dark Teal Blue #004068, Turquoise Blue #45d1db,
      Minty Green #28eaab, Pale Sky Blue #a9f9ff, Deep black #1a1a1a */
@@ -82,36 +82,35 @@
   --sidebar-ring: #45d1db;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --heading: #f2f8f9;
-    --background: #14191c;
-    --foreground: #f2f8f9;
-    --card: #1c2327;
-    --card-foreground: #f2f8f9;
-    --popover: #1c2327;
-    --popover-foreground: #f2f8f9;
-    --primary: #45d1db;
-    --primary-foreground: #04283d;
-    --secondary: #252f34;
-    --secondary-foreground: #f2f8f9;
-    --muted: #222b30;
-    --muted-foreground: #a3b8bf;
-    --accent: #0f3a45;
-    --accent-foreground: #a9f9ff;
-    --destructive: #ff7b6b;
-    --border: rgb(255 255 255 / 11%);
-    --input: rgb(255 255 255 / 18%);
-    --ring: #45d1db;
-    --sidebar: #1c2327;
-    --sidebar-foreground: #f2f8f9;
-    --sidebar-primary: #45d1db;
-    --sidebar-primary-foreground: #04283d;
-    --sidebar-accent: #252f34;
-    --sidebar-accent-foreground: #f2f8f9;
-    --sidebar-border: rgb(255 255 255 / 11%);
-    --sidebar-ring: #45d1db;
-  }
+.dark {
+  color-scheme: dark;
+  --heading: #f2f8f9;
+  --background: #14191c;
+  --foreground: #f2f8f9;
+  --card: #1c2327;
+  --card-foreground: #f2f8f9;
+  --popover: #1c2327;
+  --popover-foreground: #f2f8f9;
+  --primary: #45d1db;
+  --primary-foreground: #04283d;
+  --secondary: #252f34;
+  --secondary-foreground: #f2f8f9;
+  --muted: #222b30;
+  --muted-foreground: #a3b8bf;
+  --accent: #0f3a45;
+  --accent-foreground: #a9f9ff;
+  --destructive: #ff7b6b;
+  --border: rgb(255 255 255 / 11%);
+  --input: rgb(255 255 255 / 18%);
+  --ring: #45d1db;
+  --sidebar: #1c2327;
+  --sidebar-foreground: #f2f8f9;
+  --sidebar-primary: #45d1db;
+  --sidebar-primary-foreground: #04283d;
+  --sidebar-accent: #252f34;
+  --sidebar-accent-foreground: #f2f8f9;
+  --sidebar-border: rgb(255 255 255 / 11%);
+  --sidebar-ring: #45d1db;
 }
 
 @layer base {
