@@ -3,6 +3,9 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
+const inputClass =
+  "w-full rounded-xl border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40";
+
 export default function CTA() {
   const [formData, setFormData] = useState({
     name: "",
@@ -70,31 +73,22 @@ export default function CTA() {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-purple-600 via-purple-700 to-blue-600 relative">
-      {/* <section className="py-20 px-4 bg-gradient-to-br from-[#97F6F6] to-[#1DFCC8] relative"> */}
-      <div className="container mx-auto max-w-4xl text-center">
-        {/* Main CTA Content */}
-        <div className="text-white mb-12 z-10">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Ready to Transform
-            <br />
-            Your Workflow?
+    <section id="contact" className="bg-gradient-to-br from-[#45d1db] to-[#28eaab] px-4 py-16 lg:py-28">
+      <div className="container mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="text-[#004068]">
+          <h2 className="text-3xl font-semibold text-[#004068] sm:text-4xl lg:text-5xl">
+            Get your center set up.
           </h2>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of teams who have already revolutionized their
-            productivity with Tarteeb.
+          <p className="mt-5 max-w-[46ch] text-lg text-[#004068]">
+            Leave your name and phone number and our team will get in touch.
           </p>
         </div>
 
-        {/* Contact Form */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 max-w-2xl mx-auto z-10 ">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="flex flex-col gap-2 items-start">
-              <label
-                htmlFor="name"
-                className="block text-white text-sm font-medium mb-2"
-              >
-                Full Name *
+        <div className="rounded-2xl bg-card p-8 text-card-foreground shadow-[0_24px_60px_-28px_rgba(0,0,0,0.5)] sm:p-10">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="flex flex-col gap-2">
+              <label htmlFor="name" className="text-sm font-medium">
+                Full name
               </label>
               <input
                 type="text"
@@ -103,17 +97,14 @@ export default function CTA() {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
-                placeholder="Enter your full name"
+                className={inputClass}
+                placeholder="Aziza Karimova"
               />
             </div>
 
-            <div className="flex flex-col gap-2 items-start">
-              <label
-                htmlFor="phone"
-                className="block text-white text-sm font-medium mb-2"
-              >
-                Phone Number *
+            <div className="flex flex-col gap-2">
+              <label htmlFor="phone" className="text-sm font-medium">
+                Phone number
               </label>
               <input
                 type="tel"
@@ -122,17 +113,14 @@ export default function CTA() {
                 value={formData.phone}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
-                placeholder="Enter your phone number"
+                className={inputClass}
+                placeholder="+998 90 123 45 67"
               />
             </div>
 
-            <div className="flex flex-col gap-2 items-start">
-              <label
-                htmlFor="notes"
-                className="block text-white text-sm font-medium mb-2"
-              >
-                Additional Notes
+            <div className="flex flex-col gap-2">
+              <label htmlFor="notes" className="text-sm font-medium">
+                Notes (optional)
               </label>
               <textarea
                 id="notes"
@@ -140,8 +128,8 @@ export default function CTA() {
                 value={formData.notes}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent resize-none"
-                placeholder="Tell us more about your needs..."
+                className={`${inputClass} resize-none`}
+                placeholder="How many students and groups do you have?"
               />
             </div>
 
@@ -149,31 +137,25 @@ export default function CTA() {
               type="submit"
               disabled={isSubmitting}
               size="lg"
-              className="w-full bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full text-base"
             >
-              {isSubmitting ? "Submitting..." : "Send"}
+              {isSubmitting ? "Sending..." : "Send"}
             </Button>
 
-            {/* Status Messages */}
-            {submitStatus === "success" && (
-              <div className="text-green-300 text-sm font-medium">
-                Thank you! Your information has been submitted successfully.
-              </div>
-            )}
-            {submitStatus === "error" && (
-              <div className="text-red-300 text-sm font-medium">
-                Something went wrong. Please try again.
-              </div>
-            )}
+            <div aria-live="polite">
+              {submitStatus === "success" && (
+                <p className="text-sm font-medium text-emerald-700 dark:text-emerald-400">
+                  Thank you! Your information has been submitted successfully.
+                </p>
+              )}
+              {submitStatus === "error" && (
+                <p className="text-sm font-medium text-destructive">
+                  Something went wrong. Please try again.
+                </p>
+              )}
+            </div>
           </form>
         </div>
-      </div>
-
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-10 w-32 h-32 bg-white/10 opacity-3 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-10 w-48 h-48 bg-white/10 opacity-2 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/10  w-64 h-64 bg-white/10 opacity-2 rounded-full animate-pulse delay-500 z-0"></div>
       </div>
     </section>
   );

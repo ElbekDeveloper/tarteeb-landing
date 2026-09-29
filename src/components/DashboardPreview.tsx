@@ -1,89 +1,70 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, CircleAlert } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  CheckCircle,
+  XCircle,
+} from "@phosphor-icons/react/dist/ssr";
+import { Reveal } from "@/components/motion/Reveal";
+
+const rows = [
+  {
+    before: "Parents found out about absences days later, or never.",
+    after: "Parents get an SMS or Telegram alert seconds after you mark it.",
+  },
+  {
+    before: "Marks lived in notebooks and Excel files.",
+    after: "Enter a mark once. It reaches the parent and stays on record.",
+  },
+  {
+    before: "Teachers spent evenings calling parents.",
+    after: "Every alert goes out automatically. No calls.",
+  },
+  {
+    before: "Directors had no view of attendance across groups.",
+    after: "Attendance across every group, in one graph.",
+  },
+];
 
 export default function DashboardPreview() {
   return (
-    <section className="py-20 px-4 bg-white" id="solutions">
+    <section id="solutions" className="px-4 py-16 lg:py-28">
       <div className="container mx-auto max-w-6xl">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="rounded-4xl text-[#111] text-sm md:text-md shadow-sm px-4 py-2 inline-block mb-4">
-            Comparison
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Challenges vs. Solutions
+        <div className="max-w-3xl">
+          <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl">
+            Stop calling parents after class.
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Turning Teaching Struggles into Success Stories
+          <p className="mt-4 text-lg text-muted-foreground">
+            Four evening chores that now run themselves.
           </p>
         </div>
 
-        {/* Comparison Table */}
-        <div className="relative w-full">
-          <div className="flex flex-col md:flex-row  justify-center gap-4 md:gap-8 w-full items-stretch">
-            {/* Before Tarteeb */}
-            <Card
-              className="bg-gray-50 border-gray-200 w-full md:w-[40%]"
-              data-aos="fade-right"
-              data-aos-delay="200"
-            >
-              <CardHeader className="text-center pb-0 md:pb-4">
-                <CardTitle className="text-lg md:text-2xl font-bold text-gray-700">
-                  Before Tarteeb
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 md:space-y-4">
-                {[
-                  "Parents found out about absences days later, or never",
-                  "No clear way to track attendance",
-                  "Marks lived in notebooks and Excel files",
-                  "Teachers spent evenings calling parents",
-                  "Directors had no view of attendance across groups",
-                  "Parents had no way to check their child's progress",
-                  "No academic performance insights",
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CircleAlert className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm leading-relaxed">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-
-            {/* After Tarteeb */}
-            <Card
-              className="bg-purple-50 border-purple-200 w-full md:w-[40%]"
-              data-aos="fade-left"
-              data-aos-delay="200"
-            >
-              <CardHeader className="text-center pb-0 md:pb-4">
-                <CardTitle className="text-lg md:text-2xl font-bold text-purple-700">
-                  After Tarteeb
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 md:space-y-4">
-                {[
-                  "Parents get an SMS or Telegram message the moment a student is marked absent",
-                  "Attendance is tracked with clear statistics, and parents are notified",
-                  "Marks are recorded in one click and sent to parents instantly",
-                  "No more calls: every alert goes out automatically",
-                  "Directors see attendance across all groups at a glance through graphs",
-                  "Parents check attendance and marks any time in the Telegram bot",
-                  "Academic performance is available instantly with one click",
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-purple-700 text-sm leading-relaxed">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+        <ul className="mt-14 divide-y divide-border border-y border-border">
+          {rows.map((row, index) => (
+            <li key={row.before}>
+              <Reveal
+                delay={index * 0.05}
+                className="grid items-center gap-4 py-7 md:grid-cols-[1fr_auto_1fr] md:gap-10"
+              >
+                <p className="flex items-start gap-3 text-muted-foreground">
+                  <XCircle
+                    weight="fill"
+                    className="mt-0.5 size-5 shrink-0 text-muted-foreground/60"
+                  />
+                  {row.before}
+                </p>
+                <ArrowRight className="hidden size-5 text-muted-foreground md:block" />
+                <ArrowDown className="size-5 text-muted-foreground md:hidden" />
+                <p className="flex items-start gap-3 text-lg font-medium">
+                  <CheckCircle
+                    weight="fill"
+                    className="mt-1 size-5 shrink-0 text-primary"
+                  />
+                  {row.after}
+                </p>
+              </Reveal>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
