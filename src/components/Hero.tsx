@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "./ui/dialog";
 import AlertPreview from "./AlertPreview";
+import { SIGNUP_URL } from "@/lib/links";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -21,13 +22,7 @@ export default function Hero() {
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="text-base">
-                <a
-                  href="https://t.me/m/86rEuvWvNDIy"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Start Free
-                </a>
+                <a href={SIGNUP_URL}>Start Free</a>
               </Button>
               <Button
                 variant="outline"

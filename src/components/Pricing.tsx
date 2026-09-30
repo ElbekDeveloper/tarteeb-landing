@@ -1,6 +1,7 @@
 import { Check } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/Reveal";
+import { SIGNUP_URL } from "@/lib/links";
 
 const plans = [
   {
@@ -19,7 +20,6 @@ const plans = [
     highlighted: false,
     badge: "",
     comments: "Made possible by the Nippon Foundation's support.",
-    link: "https://t.me/m/86rEuvWvNDIy",
   },
   {
     name: "Pro",
@@ -38,7 +38,6 @@ const plans = [
     highlighted: true,
     badge: "Recommended",
     comments: "",
-    link: "https://t.me/m/WPclTnvIZDdi",
   },
   {
     name: "Pro Max",
@@ -59,7 +58,6 @@ const plans = [
     highlighted: false,
     badge: "",
     comments: "",
-    link: "https://t.me/m/WPclTnvIZDdi",
   },
 ];
 
@@ -132,7 +130,7 @@ export default function Pricing() {
                   variant={plan.highlighted ? "default" : "outline"}
                   className="w-full"
                 >
-                  <a href={plan.link} target="_blank" rel="noreferrer">
+                  <a href={SIGNUP_URL}>
                     {plan.cta}
                   </a>
                 </Button>
