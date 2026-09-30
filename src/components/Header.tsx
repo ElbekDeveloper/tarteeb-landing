@@ -12,6 +12,7 @@ import { List, TelegramLogo, X } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
+import { LOGIN_URL, SIGNUP_URL } from "@/lib/links";
 
 const BANNER_HEIGHT = 40;
 
@@ -87,10 +88,10 @@ export default function Header() {
             <div className="hidden items-center gap-2 md:flex">
               <ThemeToggle />
               <Button asChild variant="ghost">
-                <Link href="https://portal.tarteeb.uz/login">Sign In</Link>
+                <Link href={LOGIN_URL}>Sign In</Link>
               </Button>
               <Button asChild>
-                <Link href="#pricing">See Pricing</Link>
+                <a href={SIGNUP_URL}>Start Free</a>
               </Button>
             </div>
 
@@ -119,12 +120,10 @@ export default function Header() {
               <div className="mt-3 flex flex-col items-start gap-2 border-t border-border pt-4">
                 <ThemeToggle />
                 <Button asChild variant="ghost">
-                  <Link href="https://portal.tarteeb.uz/login">Sign In</Link>
+                  <Link href={LOGIN_URL}>Sign In</Link>
                 </Button>
                 <Button asChild>
-                  <Link href="#pricing" onClick={() => setIsMenuOpen(false)}>
-                    See Pricing
-                  </Link>
+                  <a href={SIGNUP_URL}>Start Free</a>
                 </Button>
               </div>
             </div>
