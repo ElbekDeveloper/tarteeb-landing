@@ -1,5 +1,6 @@
+import { PlayCircle } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@/components/ui/button";
-import { SIGNUP_URL } from "@/lib/links";
+import { SIGNUP_TUTORIAL_URL, SIGNUP_URL } from "@/lib/links";
 
 export default function CTA() {
   return (
@@ -15,13 +16,24 @@ export default function CTA() {
           </p>
         </div>
 
-        <Button
-          asChild
-          size="lg"
-          className="w-full bg-[#004068] text-base text-white hover:bg-[#004068]/90 sm:w-auto"
-        >
-          <a href={SIGNUP_URL}>Start Free</a>
-        </Button>
+        <div className="flex w-full flex-col items-center gap-4 sm:w-auto">
+          <Button
+            asChild
+            size="lg"
+            className="w-full bg-[#004068] text-base text-white hover:bg-[#004068]/90 sm:w-auto sm:min-w-56"
+          >
+            <a href={SIGNUP_URL}>Start Free</a>
+          </Button>
+          <a
+            href={SIGNUP_TUTORIAL_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[#004068] underline-offset-4 hover:underline"
+          >
+            <PlayCircle weight="fill" className="size-5 shrink-0" />
+            New here? Watch the 5-minute sign-up guide
+          </a>
+        </div>
       </div>
     </section>
   );

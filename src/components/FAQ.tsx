@@ -1,7 +1,32 @@
+import type { ReactNode } from "react";
 import { Plus } from "@phosphor-icons/react/dist/ssr";
+import { SIGNUP_TUTORIAL_URL, SIGNUP_URL } from "@/lib/links";
+
+const linkClass = "font-medium text-foreground underline underline-offset-4";
 
 // Answers only restate facts already stated in the pricing and product copy.
-const questions = [
+const questions: { q: string; a: ReactNode }[] = [
+  {
+    q: "How do I sign up?",
+    a: (
+      <>
+        Create your account on the{" "}
+        <a href={SIGNUP_URL} className={linkClass}>
+          Tarteeb portal
+        </a>
+        . If you get stuck, follow the{" "}
+        <a
+          href={SIGNUP_TUTORIAL_URL}
+          target="_blank"
+          rel="noreferrer"
+          className={linkClass}
+        >
+          5-minute sign-up guide
+        </a>{" "}
+        on YouTube (in Uzbek).
+      </>
+    ),
+  },
   {
     q: "What is Kabutar?",
     a: "Kabutar is the Tarteeb Telegram bot for parents. It sends a message whenever attendance is taken. One bot serves every center.",

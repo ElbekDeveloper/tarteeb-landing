@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WhoTrustUs from "@/components/WhoTrustUs";
 import DashboardPreview from "@/components/DashboardPreview";
+import DemoVideos from "@/components/DemoVideos";
 import Showcase from "@/components/Showcase";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <WhoTrustUs />
         <DashboardPreview />
+        <DemoVideos />
         <Showcase />
         <Features />
         <Testimonials />

@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   // remove output: "export", basePath, assetPrefix
   images: {
     unoptimized: false, // let Vercel handle images
+    remotePatterns: [{ protocol: "https", hostname: "i.ytimg.com", pathname: "/vi/**" }],
   },
 };
 export default nextConfig;
