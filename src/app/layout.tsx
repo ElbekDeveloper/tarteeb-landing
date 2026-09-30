@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { defaultSEO } from "@/lib/seo";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           src="https://scripts.simpleanalyticscdn.com/latest.js"
           strategy="afterInteractive"
         />
+        <Analytics />
       </body>
     </html>
   );
