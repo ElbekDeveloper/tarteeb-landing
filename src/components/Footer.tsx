@@ -1,13 +1,16 @@
+import { useTranslations } from "next-intl";
 import Logo from "@/components/Logo";
 
 const productLinks = [
-  { href: "#features", label: "Features" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#testimonials", label: "Reviews" },
-  { href: "#solutions", label: "Solution" },
-];
+  { href: "#features", key: "features" },
+  { href: "#pricing", key: "pricing" },
+  { href: "#testimonials", key: "testimonials" },
+  { href: "#solutions", key: "solutions" },
+] as const;
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-[#1a1a1a] px-4 py-16 text-white">
       <div className="container mx-auto max-w-6xl">
@@ -15,16 +18,17 @@ export default function Footer() {
           <div className="max-w-sm">
             <Logo className="h-11 w-auto text-white" />
             <p className="mt-6 text-lg font-semibold text-[#45d1db]">
-              Make education fun again!
+              {t("tagline")}
             </p>
             <p className="mt-3 leading-relaxed text-zinc-400">
-              Attendance and marks for study centers, with instant SMS and
-              Telegram alerts for parents.
+              {t("body")}
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-zinc-50">Product</h3>
+            <h3 className="text-sm font-semibold text-zinc-50">
+              {t("productTitle")}
+            </h3>
             <ul className="mt-4 space-y-3">
               {productLinks.map((link) => (
                 <li key={link.href}>
@@ -32,7 +36,7 @@ export default function Footer() {
                     href={link.href}
                     className="text-zinc-400 transition-colors hover:text-zinc-50"
                   >
-                    {link.label}
+                    {t(`links.${link.key}`)}
                   </a>
                 </li>
               ))}
@@ -41,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-zinc-800 pt-8 text-sm text-zinc-400">
-          © {new Date().getFullYear()} Tarteeb. All rights reserved.
+          {t("rights", { year: new Date().getFullYear() })}
         </div>
       </div>
     </footer>

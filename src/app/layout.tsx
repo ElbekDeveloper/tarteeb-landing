@@ -1,43 +1,7 @@
-import type { Metadata } from "next";
-import { Archivo } from "next/font/google";
-import Script from "next/script";
-import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
-import { defaultSEO } from "@/lib/seo";
+import type { ReactNode } from "react";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  ...defaultSEO,
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className={archivo.variable} suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark')}catch(e){}",
-          }}
-        />
-      </head>
-      <body className="font-sans antialiased">
-        {children}
-        {/* 100% privacy-first analytics */}
-        <Script
-          src="https://scripts.simpleanalyticscdn.com/latest.js"
-          strategy="afterInteractive"
-        />
-        <Analytics />
-      </body>
-    </html>
-  );
+// The real root layout is src/app/[locale]/layout.tsx, which owns <html lang>.
+// This file only exists so the top-level not-found page has a layout.
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return children;
 }

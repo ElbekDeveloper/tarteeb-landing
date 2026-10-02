@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const logos = [
   { src: "/images/nippon.svg", alt: "Nippon Foundation", width: 150 },
@@ -7,11 +8,13 @@ const logos = [
 ];
 
 export default function WhoTrustUs() {
+  const t = useTranslations("Trust");
+
   return (
     <section className="px-4 pb-16 lg:pb-24">
       <div className="container mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <h2 className="text-sm font-medium text-muted-foreground">
-          Development supported by
+          {t("title")}
         </h2>
         <ul className="flex flex-wrap items-center gap-4">
           {logos.map((logo) => (
