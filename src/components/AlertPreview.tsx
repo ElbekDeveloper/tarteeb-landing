@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "motion/react";
+import { useTranslations } from "next-intl";
 import { ChatCircleText } from "@phosphor-icons/react/dist/ssr";
 
-// Real Kabutar message format, with a sample student name.
+// Real Kabutar message format, with a sample student name. These are Uzbek
+// bot output and stay untranslated in every locale.
 const messages = [
   {
     id: "absence",
@@ -29,6 +31,7 @@ const item: Variants = {
 };
 
 export default function AlertPreview() {
+  const t = useTranslations("AlertPreview");
   const reduce = useReducedMotion();
 
   return (
@@ -55,7 +58,7 @@ export default function AlertPreview() {
           />
           <div className="leading-tight">
             <p className="text-sm font-semibold">Kabutar</p>
-            <p className="text-xs text-muted-foreground">Tarteeb parent bot</p>
+            <p className="text-xs text-muted-foreground">{t("botSubtitle")}</p>
           </div>
         </div>
 

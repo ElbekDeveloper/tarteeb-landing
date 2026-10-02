@@ -1,0 +1,261 @@
+{
+  "Meta": {
+    "title": "Tarteeb: attendance and parent alerts for study centers",
+    "description": "Attendance and marks for study centers with instant SMS and Telegram alerts for parents",
+    "keywords": "Attendance, Marks, SMS, Telegram bot, Parents, Classroom, Teacher, Student, Education center",
+    "ogAlt": "Tarteeb.uz"
+  },
+  "Header": {
+    "promoTitle": "Join our Telegram channel",
+    "promoBody": "A cozy campfire where innovative educators share how they run their centers.",
+    "promoCta": "Join Now",
+    "nav": {
+      "features": "Products",
+      "pricing": "Pricing",
+      "testimonials": "Reviews",
+      "contact": "Contact Us"
+    },
+    "homeLabel": "Tarteeb home",
+    "signIn": "Sign In",
+    "startFree": "Start Free",
+    "toggleMenu": "Toggle menu"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "names": {
+      "uz": "O'zbekcha",
+      "en": "English",
+      "ru": "Русский"
+    }
+  },
+  "Theme": {
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode"
+  },
+  "Hero": {
+    "title": "Parents know the moment you mark attendance.",
+    "subtitle": "Kabutar messages parents the moment you take attendance or enter a mark. Free for solo teachers.",
+    "startFree": "Start Free",
+    "watchDemo": "Watch Demo"
+  },
+  "AlertPreview": {
+    "botSubtitle": "Tarteeb parent bot"
+  },
+  "Trust": {
+    "title": "Development supported by"
+  },
+  "Solutions": {
+    "title": "Stop calling parents after class.",
+    "subtitle": "Four evening chores that now run themselves.",
+    "rows": {
+      "absences": {
+        "before": "Parents found out about absences days later, or never.",
+        "after": "Parents get an SMS or Telegram alert seconds after you mark it."
+      },
+      "marks": {
+        "before": "Marks lived in notebooks and Excel files.",
+        "after": "Enter a mark once. It reaches the parent and stays on record."
+      },
+      "calls": {
+        "before": "Teachers spent evenings calling parents.",
+        "after": "Every alert goes out automatically. No calls."
+      },
+      "overview": {
+        "before": "Directors had no view of attendance across groups.",
+        "after": "Attendance across every group, in one graph."
+      }
+    }
+  },
+  "DemoVideos": {
+    "title": "Watch Tarteeb at work.",
+    "subtitle": "Three short videos in Uzbek: the product, a founder's review, and how to start free.",
+    "play": "Play video: {title}",
+    "videos": {
+      "tour": {
+        "title": "A quick tour",
+        "description": "Groups, attendance and payments, managed in one place."
+      },
+      "founder": {
+        "title": "From a center founder",
+        "description": "Tolib Toirovich, founder of Lingo Pro, on running lessons with Tarteeb."
+      },
+      "start": {
+        "title": "Start for free",
+        "description": "How to start using Tarteeb free and bring AI into your classroom."
+      }
+    }
+  },
+  "Showcase": {
+    "title": "Meet Kabutar, the messenger for parents",
+    "subtitle": "Kabutar is the Telegram bot every Tarteeb parent connects to. It sends a message as soon as attendance is taken.",
+    "attendance": {
+      "title": "Attendance alerts",
+      "body": "Take attendance and parents are messaged within seconds, by Telegram or SMS."
+    },
+    "stat": {
+      "value": "100,000+",
+      "label": "messages sent by Kabutar"
+    },
+    "tableAlt": "Tarteeb attendance table showing present and absent students by day",
+    "marks": {
+      "title": "Marks alerts",
+      "body": "Enter a mark and parents receive it right away, with the attendance message."
+    },
+    "sms": {
+      "title": "Connect by SMS",
+      "body": "Register a student and their parents get an SMS to connect to Kabutar."
+    }
+  },
+  "Features": {
+    "title": "Complete study center management",
+    "imageAlt": "Tarteeb admin panel with attendance, groups and marks",
+    "items": {
+      "speed": {
+        "title": "Attendance and parent SMS in seconds",
+        "body": "Take attendance and grade in one click. Parents get an instant SMS, with no calls or Excel reports after class."
+      },
+      "groups": {
+        "title": "Students and groups, stress-free",
+        "body": "Register students, assign them to groups and handle changes in a click."
+      },
+      "overview": {
+        "title": "Monthly and yearly attendance at a glance",
+        "body": "Color-coded monthly tables for every group. The yearly heatmap turns red as absences grow, so directors spot problems early."
+      },
+      "marks": {
+        "title": "Marks sent to parents instantly",
+        "body": "Enter a mark once. Parents receive it by SMS or Telegram, so results never sit unseen in a notebook."
+      },
+      "kabutar": {
+        "title": "Kabutar keeps parents in the loop",
+        "body": "Register a student and their parents get an SMS to connect to Kabutar. From then on it messages them whenever you take attendance."
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "What study centers say",
+    "subtitle": "Centers in Bukhara, Farg'ona and Tashkent keep parents informed with Tarteeb.",
+    "items": {
+      "lingoPro": {
+        "company": "Lingo Pro LC, Bukhara",
+        "text": "Rarely a day passes without parents being notified about how successful their children are doing in our center."
+      },
+      "smartSchool": {
+        "company": "Smart School, Farg'ona",
+        "text": "It helps us stay closely connected with students and their parents."
+      },
+      "buxoroSchool": {
+        "company": "Buxoro School, Tashkent",
+        "text": "Parents receive automatic updates on their child's attendance, even without internet access, directly to their mobile phones."
+      }
+    }
+  },
+  "Pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Start free and scale as your center grows.",
+    "currency": "UZS",
+    "plans": {
+      "solo": {
+        "name": "Solo Teacher",
+        "price": "Free",
+        "period": "forever",
+        "description": "For individual teachers with up to 20 students",
+        "features": [
+          "Kabutar Telegram bot for parents",
+          "Attendance & marks alerts to parents",
+          "SMS and Telegram notifications",
+          "Up to 20 students"
+        ],
+        "cta": "Start Free",
+        "badge": "",
+        "comments": "Made possible by the Nippon Foundation's support."
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "299 000",
+        "period": "month",
+        "description": "For growing study centers with up to 100 students",
+        "features": [
+          "Kabutar Telegram bot for parents",
+          "Attendance & marks alerts to parents",
+          "SMS and Telegram notifications",
+          "Up to 100 students",
+          "Groups & attendance analytics"
+        ],
+        "cta": "Get Pro",
+        "badge": "Recommended",
+        "comments": ""
+      },
+      "proMax": {
+        "name": "Pro Max",
+        "price": "1 850 000",
+        "period": "month",
+        "description": "Everything you need to run a large study center",
+        "features": [
+          "Kabutar Telegram bot for parents",
+          "Attendance & marks alerts to parents",
+          "SMS and Telegram notifications",
+          "Unlimited students",
+          "Priority support",
+          "Onboarding & Customer Success",
+          "Money-back guarantee, risk-free"
+        ],
+        "cta": "Get Pro Max",
+        "badge": "",
+        "comments": ""
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Questions, answered",
+    "items": {
+      "signup": {
+        "q": "How do I sign up?",
+        "a": "Create your account on the <portal>Tarteeb portal</portal>. If you get stuck, follow the <guide>5-minute sign-up guide</guide> on YouTube (in Uzbek)."
+      },
+      "kabutar": {
+        "q": "What is Kabutar?",
+        "a": "Kabutar is the Tarteeb Telegram bot for parents. It sends a message whenever attendance is taken. One bot serves every center."
+      },
+      "connect": {
+        "q": "How do parents connect to Kabutar?",
+        "a": "When you register a student, their parents automatically receive an SMS to connect to Kabutar."
+      },
+      "telegram": {
+        "q": "Does every parent need Telegram?",
+        "a": "No. Alerts also go out by SMS, so parents without Telegram stay informed."
+      },
+      "limit": {
+        "q": "What if I have more than 20 students?",
+        "a": "The free Solo Teacher plan covers up to 20 students. Pro covers up to 100, and Pro Max has no student limit."
+      },
+      "guarantee": {
+        "q": "Is there a money-back guarantee?",
+        "a": "Yes. Pro Max includes a risk-free money-back guarantee."
+      }
+    }
+  },
+  "CTA": {
+    "title": "Get your center set up.",
+    "body": "Create your account and start sending parents alerts today. Free for solo teachers.",
+    "startFree": "Start Free",
+    "guide": "New here? Watch the 5-minute sign-up guide"
+  },
+  "Footer": {
+    "tagline": "Make education fun again!",
+    "body": "Attendance and marks for study centers, with instant SMS and Telegram alerts for parents.",
+    "productTitle": "Product",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "testimonials": "Reviews",
+      "solutions": "Solution"
+    },
+    "rights": "© {year} Tarteeb. All rights reserved."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist.",
+    "home": "Back to home"
+  }
+}

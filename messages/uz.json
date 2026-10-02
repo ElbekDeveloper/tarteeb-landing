@@ -1,0 +1,261 @@
+{
+  "Meta": {
+    "title": "Tarteeb: o'quv markazlari uchun davomat va ota-onalarga xabarnomalar",
+    "description": "O'quv markazlari uchun davomat va baholar: ota-onalarga SMS va Telegram orqali tezkor xabarnomalar",
+    "keywords": "Davomat, Baholar, SMS, Telegram bot, Ota-onalar, Sinf, O'qituvchi, O'quvchi, O'quv markazi",
+    "ogAlt": "Tarteeb.uz"
+  },
+  "Header": {
+    "promoTitle": "Telegram kanalimizga qo'shiling",
+    "promoBody": "Ilg'or o'qituvchilar markazni qanday boshqarishi haqida tajriba almashadigan samimiy davra.",
+    "promoCta": "Qo'shilish",
+    "nav": {
+      "features": "Mahsulotlar",
+      "pricing": "Narxlar",
+      "testimonials": "Fikrlar",
+      "contact": "Bog'lanish"
+    },
+    "homeLabel": "Tarteeb bosh sahifasi",
+    "signIn": "Kirish",
+    "startFree": "Bepul boshlash",
+    "toggleMenu": "Menyuni ochish"
+  },
+  "LocaleSwitcher": {
+    "label": "Til",
+    "names": {
+      "uz": "O'zbekcha",
+      "en": "English",
+      "ru": "Русский"
+    }
+  },
+  "Theme": {
+    "toLight": "Yorug' rejimga o'tish",
+    "toDark": "Tungi rejimga o'tish"
+  },
+  "Hero": {
+    "title": "Davomatni belgilashingiz bilanoq ota-onalar xabardor bo'ladi.",
+    "subtitle": "Davomat olinishi yoki baho qo'yilishi bilanoq Kabutar ota-onalarga xabar yuboradi. Yakka o'qituvchilar uchun bepul.",
+    "startFree": "Bepul boshlash",
+    "watchDemo": "Videoni ko'rish"
+  },
+  "AlertPreview": {
+    "botSubtitle": "Tarteeb ota-onalar boti"
+  },
+  "Trust": {
+    "title": "Loyihani qo'llab-quvvatlaganlar"
+  },
+  "Solutions": {
+    "title": "Darsdan keyin ota-onalarga qo'ng'iroq qilishga hojat yo'q.",
+    "subtitle": "Kechqurungi to'rt yumush endi o'z-o'zidan bajariladi.",
+    "rows": {
+      "absences": {
+        "before": "Ota-onalar farzandi darsga kelmaganini kunlar o'tib bilardi yoki umuman bilmasdi.",
+        "after": "Davomatni belgilaganingizdan bir necha soniya o'tib ota-onalarga SMS yoki Telegram xabari boradi."
+      },
+      "marks": {
+        "before": "Baholar daftar va Excel fayllarida qolib ketardi.",
+        "after": "Bahoni bir marta kiriting. U ota-onaga yetib boradi va tarixda saqlanib qoladi."
+      },
+      "calls": {
+        "before": "O'qituvchilar kechqurunlari ota-onalarga qo'ng'iroq qilib o'tirardi.",
+        "after": "Barcha xabarlar avtomatik yuboriladi. Qo'ng'iroqlarsiz."
+      },
+      "overview": {
+        "before": "Direktorlar guruhlar kesimida davomatni ko'ra olmasdi.",
+        "after": "Barcha guruhlar davomati bitta grafikda."
+      }
+    }
+  },
+  "DemoVideos": {
+    "title": "Tarteebni amalda ko'ring.",
+    "subtitle": "Uchta qisqa video: mahsulot bilan tanishuv, markaz asoschisining fikri va bepul boshlash bo'yicha qo'llanma.",
+    "play": "Videoni ijro etish: {title}",
+    "videos": {
+      "tour": {
+        "title": "Qisqacha tanishuv",
+        "description": "Guruhlar, davomat va to'lovlar bitta joyda boshqariladi."
+      },
+      "founder": {
+        "title": "Markaz asoschisining fikri",
+        "description": "Lingo Pro asoschisi Tolib Toirovich darslarni Tarteeb bilan qanday tashkil qilishi haqida."
+      },
+      "start": {
+        "title": "Bepul boshlang",
+        "description": "Tarteebdan bepul foydalanishni qanday boshlash va darsingizga sun'iy intellektni olib kirish."
+      }
+    }
+  },
+  "Showcase": {
+    "title": "Kabutar bilan tanishing: ota-onalar uchun xabarchi",
+    "subtitle": "Kabutar Tarteebdagi barcha ota-onalar ulanadigan Telegram bot. Davomat olinishi bilanoq u xabar yuboradi.",
+    "attendance": {
+      "title": "Davomat xabarnomalari",
+      "body": "Davomatni oling, ota-onalar bir necha soniyada Telegram yoki SMS orqali xabar oladi."
+    },
+    "stat": {
+      "value": "100 000+",
+      "label": "xabar Kabutar orqali yuborilgan"
+    },
+    "tableAlt": "Kunlar bo'yicha kelgan va kelmagan o'quvchilarni ko'rsatuvchi Tarteeb davomat jadvali",
+    "marks": {
+      "title": "Baho xabarnomalari",
+      "body": "Baho qo'ying, ota-onalar uni darhol davomat xabari bilan birga oladi."
+    },
+    "sms": {
+      "title": "SMS orqali ulanish",
+      "body": "O'quvchini ro'yxatdan o'tkazing, ota-onasiga Kabutarga ulanish uchun SMS keladi."
+    }
+  },
+  "Features": {
+    "title": "O'quv markazini to'liq boshqarish",
+    "imageAlt": "Davomat, guruhlar va baholar ko'rsatilgan Tarteeb boshqaruv paneli",
+    "items": {
+      "speed": {
+        "title": "Davomat va ota-onalarga SMS soniyalar ichida",
+        "body": "Davomat va baholashni bir bosishda bajaring. Ota-onalar darhol SMS oladi: darsdan keyin na qo'ng'iroq, na Excel hisoboti kerak."
+      },
+      "groups": {
+        "title": "O'quvchilar va guruhlar, ortiqcha tashvishsiz",
+        "body": "O'quvchilarni ro'yxatdan o'tkazing, guruhlarga biriktiring va o'zgarishlarni bir bosishda kiriting."
+      },
+      "overview": {
+        "title": "Oylik va yillik davomat bir qarashda",
+        "body": "Har bir guruh uchun rangli oylik jadvallar. Dars qoldirish ko'paygan sari yillik issiqlik xaritasi qizarib boradi, shu sababli direktorlar muammoni erta payqaydi."
+      },
+      "marks": {
+        "title": "Baholar ota-onalarga darhol yetadi",
+        "body": "Bahoni bir marta kiriting. Ota-onalar uni SMS yoki Telegram orqali oladi, natijalar daftarda e'tiborsiz qolib ketmaydi."
+      },
+      "kabutar": {
+        "title": "Kabutar ota-onalarni doim xabardor qiladi",
+        "body": "O'quvchini ro'yxatdan o'tkazing, ota-onasiga Kabutarga ulanish uchun SMS keladi. Shundan so'ng har safar davomat olganingizda u ularga xabar yuboradi."
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "O'quv markazlari fikri",
+    "subtitle": "Buxoro, Farg'ona va Toshkentdagi markazlar Tarteeb yordamida ota-onalarni xabardor qilib turadi.",
+    "items": {
+      "lingoPro": {
+        "company": "Lingo Pro o'quv markazi, Buxoro",
+        "text": "Ota-onalar farzandlarining markazimizdagi muvaffaqiyatlari haqida xabar olmaydigan kun kam bo'ladi."
+      },
+      "smartSchool": {
+        "company": "Smart School, Farg'ona",
+        "text": "U o'quvchilar va ularning ota-onalari bilan yaqin aloqada bo'lishimizga yordam beradi."
+      },
+      "buxoroSchool": {
+        "company": "Buxoro School, Toshkent",
+        "text": "Ota-onalar internet bo'lmasa ham farzandining davomati haqidagi xabarlarni avtomatik tarzda to'g'ridan-to'g'ri telefoniga oladi."
+      }
+    }
+  },
+  "Pricing": {
+    "title": "Oddiy va shaffof narxlar",
+    "subtitle": "Bepul boshlang va markazingiz o'sgani sari kengaytiring.",
+    "currency": "so'm",
+    "plans": {
+      "solo": {
+        "name": "Yakka o'qituvchi",
+        "price": "Bepul",
+        "period": "doimiy",
+        "description": "20 nafargacha o'quvchisi bor yakka o'qituvchilar uchun",
+        "features": [
+          "Ota-onalar uchun Kabutar Telegram boti",
+          "Ota-onalarga davomat va baho xabarnomalari",
+          "SMS va Telegram bildirishnomalari",
+          "20 nafargacha o'quvchi"
+        ],
+        "cta": "Bepul boshlash",
+        "badge": "",
+        "comments": "Nippon Foundation ko'magi bilan taqdim etiladi."
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "299 000",
+        "period": "oy",
+        "description": "100 nafargacha o'quvchisi bor, rivojlanayotgan o'quv markazlari uchun",
+        "features": [
+          "Ota-onalar uchun Kabutar Telegram boti",
+          "Ota-onalarga davomat va baho xabarnomalari",
+          "SMS va Telegram bildirishnomalari",
+          "100 nafargacha o'quvchi",
+          "Guruhlar va davomat tahlili"
+        ],
+        "cta": "Pro tarifini tanlash",
+        "badge": "Tavsiya etiladi",
+        "comments": ""
+      },
+      "proMax": {
+        "name": "Pro Max",
+        "price": "1 850 000",
+        "period": "oy",
+        "description": "Yirik o'quv markazini boshqarish uchun kerakli hamma narsa",
+        "features": [
+          "Ota-onalar uchun Kabutar Telegram boti",
+          "Ota-onalarga davomat va baho xabarnomalari",
+          "SMS va Telegram bildirishnomalari",
+          "Cheksiz o'quvchilar soni",
+          "Ustuvor qo'llab-quvvatlash",
+          "Ishga tushirishda yordam va mijozlar bilan ishlash xizmati",
+          "Pulni qaytarish kafolati, hech qanday tavakkalsiz"
+        ],
+        "cta": "Pro Max tarifini tanlash",
+        "badge": "",
+        "comments": ""
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Savollarga javoblar",
+    "items": {
+      "signup": {
+        "q": "Qanday ro'yxatdan o'taman?",
+        "a": "Hisobingizni <portal>Tarteeb portalida</portal> yarating. Qiyinchilik bo'lsa, YouTube'dagi <guide>5 daqiqalik ro'yxatdan o'tish qo'llanmasini</guide> ko'ring."
+      },
+      "kabutar": {
+        "q": "Kabutar nima?",
+        "a": "Kabutar ota-onalar uchun Tarteebning Telegram boti. Har safar davomat olinganda u xabar yuboradi. Barcha markazlarga bitta bot xizmat qiladi."
+      },
+      "connect": {
+        "q": "Ota-onalar Kabutarga qanday ulanadi?",
+        "a": "O'quvchini ro'yxatdan o'tkazganingizda, uning ota-onasiga Kabutarga ulanish uchun avtomatik ravishda SMS keladi."
+      },
+      "telegram": {
+        "q": "Har bir ota-onada Telegram bo'lishi shartmi?",
+        "a": "Yo'q. Xabarnomalar SMS orqali ham yuboriladi, shuning uchun Telegrami yo'q ota-onalar ham xabardor bo'lib turadi."
+      },
+      "limit": {
+        "q": "O'quvchilarim 20 nafardan ko'p bo'lsa-chi?",
+        "a": "Bepul «Yakka o'qituvchi» tarifi 20 nafargacha o'quvchini qamrab oladi. Pro 100 nafargacha, Pro Max'da esa o'quvchilar soni cheklanmagan."
+      },
+      "guarantee": {
+        "q": "Pulni qaytarish kafolati bormi?",
+        "a": "Ha. Pro Max tarifida hech qanday tavakkalsiz pulni qaytarish kafolati bor."
+      }
+    }
+  },
+  "CTA": {
+    "title": "Markazingizni ishga tushiring.",
+    "body": "Hisob yarating va bugunoq ota-onalarga xabarnomalar yuborishni boshlang. Yakka o'qituvchilar uchun bepul.",
+    "startFree": "Bepul boshlash",
+    "guide": "Yangimisiz? 5 daqiqalik ro'yxatdan o'tish qo'llanmasini ko'ring"
+  },
+  "Footer": {
+    "tagline": "Ta'limni yana qiziqarli qilaylik!",
+    "body": "O'quv markazlari uchun davomat va baholar, ota-onalarga SMS va Telegram orqali tezkor xabarnomalar bilan.",
+    "productTitle": "Mahsulot",
+    "links": {
+      "features": "Imkoniyatlar",
+      "pricing": "Narxlar",
+      "testimonials": "Fikrlar",
+      "solutions": "Yechim"
+    },
+    "rights": "© {year} Tarteeb. Barcha huquqlar himoyalangan."
+  },
+  "NotFound": {
+    "title": "Sahifa topilmadi",
+    "body": "Siz qidirayotgan sahifa mavjud emas.",
+    "home": "Bosh sahifaga qaytish"
+  }
+}

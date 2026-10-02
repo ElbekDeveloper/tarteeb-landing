@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Moon, Sun } from "@phosphor-icons/react/dist/ssr";
 
 // Light is the default. Dark is opt-in and remembered in localStorage; the
 // inline script in layout.tsx applies it before first paint.
 export default function ThemeToggle() {
+  const t = useTranslations("Theme");
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
@@ -25,7 +27,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={dark ? t("toLight") : t("toDark")}
       className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
     >
       {dark ? <Sun className="size-5" /> : <Moon className="size-5" />}

@@ -18,6 +18,14 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Languages
+
+The site is served in Uzbek (default, at `/`), English (`/en`) and Russian (`/ru`) with [next-intl](https://next-intl.dev). Browser language never redirects: `/` is always Uzbek.
+
+- All copy lives in `messages/uz.json`, `messages/en.json` and `messages/ru.json`. Add a key to all three.
+- `npm run check:messages` checks that the three files have the same keys and contain no em or en dashes.
+- Routing: `src/i18n/routing.ts`. Per-locale SEO (canonical, hreflang, Open Graph locale): `src/lib/seo.ts`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

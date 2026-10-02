@@ -3,37 +3,29 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { useTranslations } from "next-intl";
 import { Play } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/motion/Reveal";
 import { cn } from "@/lib/utils";
 
-// Tarteeb's own YouTube Shorts, all in Uzbek.
+// Tarteeb's own YouTube Shorts, all in Uzbek. Titles and descriptions live in
+// messages under DemoVideos.videos.<key>.
 const videos = [
-  {
-    id: "X04iFi_xlZQ",
-    title: "A quick tour",
-    description: "Groups, attendance and payments, managed in one place.",
-  },
-  {
-    id: "WtzOWPFM4iQ",
-    title: "From a center founder",
-    description: "Tolib Toirovich, founder of Lingo Pro, on running lessons with Tarteeb.",
-  },
-  {
-    id: "REJbBvjQ4xo",
-    title: "Start for free",
-    description: "How to start using Tarteeb free and bring AI into your classroom.",
-  },
-];
+  { id: "X04iFi_xlZQ", key: "tour" },
+  { id: "WtzOWPFM4iQ", key: "founder" },
+  { id: "REJbBvjQ4xo", key: "start" },
+] as const;
 
 const poster = (id: string) => `https://i.ytimg.com/vi/${id}/oar2.jpg`;
 
 export default function DemoVideos() {
+  const t = useTranslations("DemoVideos");
   const reduce = useReducedMotion();
   const [active, setActive] = useState(0);
   const [playing, setPlaying] = useState(false);
   const playerRef = useRef<HTMLDivElement>(null);
   const video = videos[active];
+  const videoTitle = t(`videos.${video.key}.title`);
 
   // On phones the list sits under the player; bring the player back into
   // view so the switch is visible.
@@ -53,11 +45,10 @@ export default function DemoVideos() {
       <div className="container mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_minmax(0,340px)] lg:grid-rows-[auto_1fr] lg:gap-x-20">
         <div className="max-w-xl lg:col-start-1">
           <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl">
-            Watch Tarteeb at work.
+            {t("title")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Three short videos in Uzbek: the product, a founder&apos;s review,
-            and how to start free.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -70,7 +61,7 @@ export default function DemoVideos() {
               <iframe
                 key={video.id}
                 src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&playsinline=1&rel=0`}
-                title={video.title}
+                title={videoTitle}
                 className="absolute inset-0 size-full"
                 allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                 allowFullScreen
@@ -81,7 +72,7 @@ export default function DemoVideos() {
                   key={video.id}
                   type="button"
                   onClick={() => setPlaying(true)}
-                  aria-label={`Play video: ${video.title}`}
+                  aria-label={t("play", { title: videoTitle })}
                   className="group absolute inset-0 cursor-pointer"
                   initial={reduce ? false : { opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -136,10 +127,10 @@ export default function DemoVideos() {
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block text-lg font-semibold">
-                        {item.title}
+                        {t(`videos.${item.key}.title`)}
                       </span>
                       <span className="mt-1 block text-sm text-muted-foreground">
-                        {item.description}
+                        {t(`videos.${item.key}.description`)}
                       </span>
                     </span>
                     <Play
